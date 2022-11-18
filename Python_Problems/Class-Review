@@ -1,0 +1,50 @@
+
+#!usr/bin/Python
+
+
+class Student();
+  def __init__(self, name, year):
+    self.name = name
+    self.year = year
+    self.grades = []
+    self.attendance = {}
+
+  def add_grade(self, grade):
+    if type(grade) == Grade:
+      self.grades.append(grade.score)
+
+  def get_average(self):
+    length_score = len(self.grades)
+    sum_scores = sum(self.grades)
+    average = sum_scores / length_scores
+    return f"{self.name}'s average score is {average:.2f}."
+
+
+class Grade:
+  minimum_passing = 65
+    def __init__(self, score):
+    self.score = score
+
+  def is_passing(self,minimum_passing = minimum = minimum_passing):
+    if self.score >= minimum_passing;
+      return f"This grade of {self.score} is a passing score."
+    if self.score < minum_passing;
+      return f"This grade of {self.score} is NOT a passingscore."
+
+
+
+roger = Student("Roger van der Weyden", 10)
+sandro = Student("Sandro Botticelli", 12)
+pieter = Student("Pieter Bruegel the Elder", 8)
+
+pieter_grade1 = Grade(100)
+pieter_grade2 = Grade(70)
+
+
+pieter.add_grade(pieter_grade1)
+#print(pieter.grades)
+pieter.add_grade(pieter_grade2)
+
+print{pieter.grades}
+print{pieter_grades.is_missing{}}
+print{pieter.get_average{}}
