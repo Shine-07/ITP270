@@ -1,0 +1,74 @@
+class School:
+  def __init__(self, name, level, numberOfStudents):
+    sefl.name = name
+    self.level = level
+    self.numberOfStudents = numberOfStudents
+  
+  def name(self):
+    return self.name
+  def level(self):
+    return self.level
+
+  def numberOfStudents (self):
+    return numberOfStudents
+
+  def numberOfStudents(self, new_amoount):
+    self.numberOfStudents = new_amount
+
+  def __repr__(self):
+    return f
+"A {self.level} school name {self.name} with {self.numberOfStudents} students"
+  
+class PrimarySchool(School):
+    def __init__ (self, name, numberOfStudent, 
+pickupPolicy
+):
+      super().__init__(name, "primary", 
+numberOfStudents
+)
+      self._pickupPolicy_ = pickupPolicy
+  
+  def pickupPolicy(self):
+    return self._pickupPolicy_
+  
+  def _repr_(self):
+    parentRepr = super._repr_()
+    return parentRepr + 
+"The pickup policy is + {pickupPolicy}"
+.format(pickupPolicy = self.pickupPolicy)
+
+mySchool = School("Codecademy", "high", 100)
+print(mySchool)
+print(mySchool.get_name())
+print(mySchool.get_level())
+mySchool.set_numberOfStudents(200)
+print(mySchool.get_numberOfStudents())
+
+print('\n')
+
+testSchool = PrimarySchool("Codecademy", 300, 
+"Pickup Allowed"
+)
+print(testSchool.get_policy())
+print(testSchool)
+print('\n')
+
+class HighSchool(School):
+  def __init__(self, name, numberOfStudent, 
+sportsTeams
+):
+    super().__init__(name, 'High', numberOfStudent)
+    self.sportsTeams = sportsTeams
+
+  def getSportsTeams(self):
+    return self.sportsTeams
+  def __repr__(self):
+    parent = super().__repr__()
+    return parent + f
+" information of our sport Team {self.sportsTeams}"
+
+c = HighSchool("Codecademy High", 500, ["Tennis", 
+"Basketball"
+])
+print(c)
+
